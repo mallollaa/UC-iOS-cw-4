@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var Additem = ""
     @State var items = ["tomato","cucumber","watermelon","suger","rice","petroot"]
+//    @State var randomName = items.randomElement()!
     var body: some View {
         VStack{
         
@@ -47,7 +48,7 @@ struct ContentView: View {
             
             
             Button { items.append(Additem)
-                Text(items.randomElement() )
+               Additem = items.randomElement()!
             }
         label: {
             Image(systemName: "questionmark.app.fill")
